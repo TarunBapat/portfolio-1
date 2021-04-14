@@ -28,7 +28,7 @@ const filterContainer=document.querySelector(".portfolio-filter");
 					portfolioItems[k].classList.add('show');
 				}
 			}
-			console.log(filterVal);
+			
 		})
 	}
 
@@ -42,9 +42,15 @@ const lightbox=document.querySelector('.lightbox'),
 
 let itemIndex=0;
 
-for(i=0; i<totalPortfolioItems; i++){
+for(i=0;i<totalPortfolioItems;i++){
 	portfolioItems[i].addEventListener('click',function(){
 		itemIndex=i;
 		changeItem();
 	})
+
+}
+
+function changeItem(){
+	imgSrc=portfolioItems[itemIndex].querySelector('.portfolio-img img').getAttribute('src');
+	console.log(imgSrc);
 }

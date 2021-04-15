@@ -474,6 +474,9 @@ body{
 	transition: all 0.5s ease;
 	border-radius: 50%;
 }
+.service .service-item .service-item-inner:hover .icon .fa{
+	color: #fff;
+}
 .service .service-item .service-item-inner .icon .fa{
 	font-size: 40px;
 	line-height: 60px;
@@ -608,6 +611,7 @@ body{
 .blog .blog-item{
 	flex: 0 0 33.33%;
 	max-width: 33.33%;
+	padding-bottom: 10px;
 }
 .blog .blog-item .blog-img{
 	position: relative;
@@ -829,5 +833,56 @@ body{
 .lightbox .lightbox-controls .prev-item .fa,
 .lightbox .lightbox-controls .next-item .fa{
 	font-size: 32px;
+
+}
+
+/* Responsive */
+
+@media (max-width: 1199px){
+	.aside{
+		left: -270px;
+	}
+	.main-content{
+		padding-left: 0;
+	}
+	.about .about-content .personal-info .info-item p span{
+		display: block;
+		margin-left: 0;
+	}
+}
+@media (max-width: 991px){
+.service .service-item,
+.portfolio .portfolio-item,
+.blog .blog-item
+ {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+}
+@media (max-width: 767px){
+	.blog .blog-item,
+	.about .about-content .personal-info,
+	.about .about-content .skills, 
+	.about .about-content .education,
+	.about .about-content .experience,
+	.contact .contact-form .col-6
+	{
+    flex: 0 0 100%;
+    max-width: 100%;
+	}
+	.portfolio .portfolio-filter button{
+		margin-bottom: 10px;
+	}
+
+}
+@media (max-width: 575px){
+.service .service-item,
+.portfolio .portfolio-item,
+.contact .contact-info-item
+ {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
 
 }

@@ -110,3 +110,7 @@ function asideSectionTogglerBtn(){
 		allSection[i].classList.toggle('open');
 	}
 }
+
+function Message() {
+	alert('Thanks for your Message');
+}

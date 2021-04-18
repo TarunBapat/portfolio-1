@@ -54,3 +54,59 @@ function changeItem(){
 	imgSrc=portfolioItems[itemIndex].querySelector('.portfolio-img img').getAttribute('src');
 	console.log(imgSrc);
 }
+
+
+//aside bar
+
+const nav=document.querySelector('.nav');
+
+const navList=nav.querySelectorAll('li');
+const totalNavList=navList.length;
+const allSection=document.querySelectorAll('.section');
+const totalSection=allSection.length;
+console.log(allSection);
+
+for(i=0;i<totalNavList;i++){
+	const a=navList[i].querySelector('a');
+	a.addEventListener('click',function(){
+		//remove back-section
+		for(i=0;i<totalSection;i++){
+			allSection[i].classList.remove('back-section');
+		}
+		for(j=0;j<totalNavList; j++){
+			if(navList[j].querySelector('a').classList.contains('active')){
+				allSection[j].classList.add('back-section');
+			}
+			navList[j].querySelector('a').classList.remove('active');
+		}
+		
+		this.classList.add('active');
+		showSection(this);
+	})
+}
+
+function showSection(element){
+	for(i=0;i<totalSection;i++){
+		allSection[i].classList.remove('active');
+	}
+	const target=element.getAttribute('href').split('#')[1];
+
+	console.log(target);
+	document.querySelector('#'+target).classList.add('active');
+}
+
+
+const navToggleBtn=document.querySelector('.nav-toggler');
+const aside=document.querySelector('.aside');
+
+navToggleBtn.addEventListener('click',()=>{
+	asideSectionTogglerBtn();
+})
+
+function asideSectionTogglerBtn(){
+	aside.classList.toggle('open');
+	navToggleBtn.classList.toggle('open');
+	for(i=0;i<totalSection;i++){
+		allSection[i].classList.toggle('open');
+	}
+}

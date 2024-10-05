@@ -258,6 +258,7 @@ body{
 .home{
 	min-height: 100vh;
 	display: flex;
+	background-image: url("images/background.jpg");
 }
 .home .intro{
 	text-align: center;
@@ -408,7 +409,7 @@ body{
 
 .about .about-content .experience{
 	flex: 0 0 50%;
-	max-width: 50%;
+	max-width: 100%;
 	margin-top: 30px;
 }
 
@@ -499,9 +500,10 @@ body{
 .service .service-item .service-item-inner{
 	background: #fdf9ff;
 	border: 1px solid #d4d4e3;
-	padding: 30px 15px;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 50%;
+    height: 120px;
+    width: 120px;
 }
 
 .service .service-item .service-item-inner .icon{

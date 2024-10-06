@@ -997,3 +997,32 @@ body.dark .aside nav li a{
 }
 
 }
+
+.text-reveal{
+	position: relative;
+	color: transparent;
+	font-size: 30px;
+}
+.text-reveal::before{
+	content: "I' am a web Developer";
+	color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	width: 0;
+	white-space: nowrap;
+	border-right: 2px solid black;
+	animation: revealText 3s ease forwards infinite;
+}
+@keyframes revealText {
+	0% {
+	  width: 0;
+	}
+	50% {
+	  width: 100%;
+	}
+	100% {
+	  width: 0;
+	}
+  }
